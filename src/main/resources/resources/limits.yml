@@ -1,0 +1,3 @@
+# A second file: @Value names it with file = "limits.yml".
+max-players: 20
+blocked: [bedrock, barrier]

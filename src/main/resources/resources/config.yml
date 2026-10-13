@@ -1,0 +1,15 @@
+# Extracted into the plugin's data folder on the first start; edit it there and run /versatia reload values.
+motd: "Welcome to the values example"
+shop:
+  tax: 8%
+  hours: [9, 17]
+  discounts:
+    diamond: 10%
+    bread: 50%
+  # Optional: the property is nullable, so the key may be left out
+  # closed-on: sunday
+  # Read through mappers: seconds become ticks, the section becomes a PriceRange
+  restock-seconds: 90
+  price-range:
+    min: 1
+    max: 64
