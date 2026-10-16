@@ -18,7 +18,8 @@ data class PriceRange(val min: Int, val max: Int) {
 
     object Mapper : ValueMapper<PriceRange> {
         override fun map(section: ConfigurationSection, key: String) = section.getConfigurationSectionOrThrow(key).let {
-            PriceRange(it.getIntOrThrow("min"), it.getIntOrThrow("max").validateAtLeast(it.getIntOrThrow("min")))
+            val min = it.getIntOrThrow("min")
+            PriceRange(min, it.getIntOrThrow("max").validateAtLeast(min))
         }
     }
 }

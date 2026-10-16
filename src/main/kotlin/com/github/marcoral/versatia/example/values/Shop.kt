@@ -9,7 +9,7 @@ import java.time.DayOfWeek
 @LocalBean
 class Shop {
     @Value("shop.tax")
-    var tax = Percent.of(0.0)
+    var tax = Percent.ZERO
 
     @Value("shop.hours")
     private var hours: List<Int> = emptyList()
