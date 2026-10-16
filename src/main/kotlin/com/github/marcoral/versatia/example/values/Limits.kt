@@ -13,5 +13,5 @@ object Limits {
     @Value("blocked", file = "limits.yml")
     var blocked: List<Material> = emptyList()
 
-    fun describe() = "${maxPlayers.value} players${if (maxPlayers.hasPrevious) " (was ${maxPlayers.previous})" else ""}, blocked: $blocked"
+    fun describe() = "${maxPlayers.value} players${if (maxPlayers.hasPrevious && maxPlayers.changed) " (was ${maxPlayers.previous})" else ""}, blocked: $blocked"
 }

@@ -18,8 +18,9 @@ Part of the [Versatia examples](https://github.com/VersatiaFramework/VersatiaExa
 
 - Edit `plugins/VersatiaExample-Config-Values/config.yml` on the server, uncomment `closed-on`
   and run `/versatia reload values`: the three lines are logged again with the new values.
-- Change `max-players` in `limits.yml` and reload: the line reads `25 players (was 20)`, because
-  the property is a `PreviousValueTracking` and keeps the value it replaced.
+- Change `max-players` in `limits.yml` to `25` and reload: the line reads `25 players (was 20)`,
+  because the property is a `PreviousValueTracking` and keeps the value it replaced; a reload that
+  leaves it unchanged prints no `(was ...)`.
 - Set `tax: 8` (no percent sign) and reload: the command reports
   `Plugin VersatiaExample-Config-Values: ...Shop.tax could not be read from config.yml: Value at "shop.tax" is not a percent string ...`
   and the plugin keeps the values it had.
@@ -34,7 +35,9 @@ Part of the [Versatia examples](https://github.com/VersatiaFramework/VersatiaExa
 Requires JDK 21 and VersatiaStarter with what it exports (VersatiaAPI, the module APIs) in your
 local Maven repository (`./gradlew publishToMavenLocal` in each checkout; see
 [Building the framework](https://versatiaframework.github.io/VersatiaDocs/docs/contributing/building));
-running it requires a Paper 1.21.4 server with VersatiaCore installed.
+running it requires a Paper 1.21.4 server with VersatiaCore installed, and the
+[CommandAPI](https://commandapi.jorel.dev) 12.x plugin for `/versatia reload` (without it, a
+plugin can still reload itself with `versatiaReload()`).
 
 ```bash
 ./gradlew build
