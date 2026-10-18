@@ -22,7 +22,7 @@ Part of the [Versatia examples](https://github.com/VersatiaFramework/VersatiaExa
   because the property is a `PreviousValueTracking` and keeps the value it replaced; a reload that
   leaves it unchanged prints no `(was ...)`.
 - Set `tax: 8` (no percent sign) and reload: the command reports
-  `Plugin VersatiaExample-Config-Values: ...Shop.tax could not be read from config.yml: Value at "shop.tax" is not a percent string ...`
+  `VersatiaExample-Config-Values failed to reload: ...Shop.tax could not be read from config.yml: Value at "shop.tax" is not a percent string ...`
   and the plugin keeps the values it had.
 - Remove `motd` and reload: a non-nullable property without a value is an error; `closed-on` may
   be absent because `closedOn` is nullable.
