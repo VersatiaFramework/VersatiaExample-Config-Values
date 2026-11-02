@@ -1,5 +1,9 @@
 # Extracted into the plugin's data folder on the first start; edit it there and run /versatia reload values.
 motd: "Welcome to the values example"
+# A Secret, logged as ****; empty switches the API off. Write the key itself, an environment variable,
+# ${env:VALUES_API_KEY}, or a file holding only the key: ${pluginfile:api-key.txt} for one in this folder,
+# ${file:/etc/minecraft/api-key.txt} for an absolute path, ${file:secrets/api-key.txt} for one under the server folder
+api-key: ''
 shop:
   tax: 8%
   hours: [9, 17]

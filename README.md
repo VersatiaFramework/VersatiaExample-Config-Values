@@ -10,6 +10,7 @@ Part of the [Versatia examples](https://github.com/VersatiaFramework/VersatiaExa
 
 ```
 [VersatiaExample-Config-Values] motd: Welcome to the values example
+[VersatiaExample-Config-Values] API key: none, the API is off
 [VersatiaExample-Config-Values] Limits: 20 players, blocked: [BEDROCK, BARRIER]
 [VersatiaExample-Config-Values] Shop: tax 8.0%, open 9-17, discounts {diamond=10.0%, bread=50.0%}, closed on no day, restock every 1800 ticks, prices 1-64
 ```
@@ -26,6 +27,16 @@ Part of the [Versatia examples](https://github.com/VersatiaFramework/VersatiaExa
   and the plugin keeps the values it had.
 - Remove `motd` and reload: a non-nullable property without a value is an error; `closed-on` may
   be absent because `closedOn` is nullable.
+- Set `api-key: abc123` and reload: the log shows `API key: ****`. Set `api-key: 0123` and reload:
+  the reload fails asking for quotes, since YAML reads `0123` as the number 83; `'0123'` works.
+  Set `api-key: ${env:VALUES_API_KEY}` and reload without that environment variable: the reload
+  fails with `...ValuesPlugin.apiKey could not be read from config.yml: Value at "api-key" uses ${env:VALUES_API_KEY}, which is not set; ...`.
+  Write a key into `plugins/VersatiaExample-Config-Values/api-key.txt`, set
+  `api-key: ${pluginfile:api-key.txt}` and reload: the log shows `API key: ****`, never the key.
+  `${file:plugins/VersatiaExample-Config-Values/api-key.txt}` reads the same file from the server
+  folder, and an absolute path works too (`${file:/etc/minecraft/api-key.txt}`, on Windows
+  `${file:C:/secrets/api-key.txt}`). Rename the file and reload: the reload fails with
+  `... uses ${pluginfile:api-key.txt}, but <path> does not exist`.
 - Set `price-range.max` below `min` and reload: the mapper's own check fails the reload with its message.
 - Make `hours` public: the generated descriptor switches from `Setter.Reflective` to a direct
   assignment.
