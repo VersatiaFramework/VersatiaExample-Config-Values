@@ -1,10 +1,10 @@
-package com.github.marcoral.versatia.example.values
+package dev.versatia.example.values
 
-import com.github.marcoral.versatia.config.ValueMapper
-import com.github.marcoral.versatia.util.config.getConfigurationSectionOrThrow
-import com.github.marcoral.versatia.util.config.getIntOrThrow
-import com.github.marcoral.versatia.util.config.getLongOrThrow
-import com.github.marcoral.versatia.util.validation.validateAtLeast
+import dev.versatia.config.ValueMapper
+import dev.versatia.util.config.getConfigurationSectionOrThrow
+import dev.versatia.util.config.getIntOrThrow
+import dev.versatia.util.config.getLongOrThrow
+import dev.versatia.util.validation.validateAtLeast
 import org.bukkit.configuration.ConfigurationSection
 
 /** A mapper converts a value the runtime would read as one type into another: seconds in the file, ticks in the code. */

@@ -1,6 +1,6 @@
 name: VersatiaExample-Config-Values
 version: '${version}'
-main: com.github.marcoral.versatia.example.values.ValuesPlugin
+main: dev.versatia.example.values.ValuesPlugin
 api-version: '1.21'
 author: Versatia
 description: Properties set from YAML files with @Value, re-read on reload.

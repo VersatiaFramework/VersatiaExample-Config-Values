@@ -1,8 +1,8 @@
-package com.github.marcoral.versatia.example.values
+package dev.versatia.example.values
 
-import com.github.marcoral.versatia.config.Value
-import com.github.marcoral.versatia.di.LocalBean
-import com.github.marcoral.versatia.util.type.Percent
+import dev.versatia.config.Value
+import dev.versatia.di.LocalBean
+import dev.versatia.util.type.Percent
 import java.time.DayOfWeek
 
 /** Values of a bean, from `config.yml`: a scalar, a private list, a map, an optional enum and two mapped values. */

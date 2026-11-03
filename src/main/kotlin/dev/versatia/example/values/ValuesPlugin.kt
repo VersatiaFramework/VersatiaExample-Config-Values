@@ -1,11 +1,11 @@
-package com.github.marcoral.versatia.example.values
+package dev.versatia.example.values
 
-import com.github.marcoral.versatia.Phase
-import com.github.marcoral.versatia.FriendlyName
-import com.github.marcoral.versatia.VersatiaPlugin
-import com.github.marcoral.versatia.config.Value
-import com.github.marcoral.versatia.lifecycle.AutoInvoke
-import com.github.marcoral.versatia.util.type.Secret
+import dev.versatia.Phase
+import dev.versatia.FriendlyName
+import dev.versatia.VersatiaPlugin
+import dev.versatia.config.Value
+import dev.versatia.lifecycle.AutoInvoke
+import dev.versatia.util.type.Secret
 
 /** The values are set before the function runs, at start and at every `/versatia reload values`. */
 @FriendlyName("values")

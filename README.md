@@ -2,9 +2,9 @@
 
 Properties marked `@Value` are set from YAML files in the data folder when the plugin starts and at every reload, built-in types directly and your own through a mapper. Nothing to read, nothing to reload by hand.
 
-Part of the [Versatia examples](https://github.com/VersatiaFramework/VersatiaExamples); documentation: [Configuration values](https://versatiaframework.github.io/VersatiaDocs/docs/configuration).
+Part of the [Versatia examples](https://github.com/VersatiaFramework/VersatiaExamples); documentation: [Configuration values](https://versatia.dev/docs/configuration).
 
-**Start with** [`Shop.kt`](src/main/kotlin/com/github/marcoral/versatia/example/values/Shop.kt) and the mappers in [`Mappers.kt`](src/main/kotlin/com/github/marcoral/versatia/example/values/Mappers.kt), then [`Limits.kt`](src/main/kotlin/com/github/marcoral/versatia/example/values/Limits.kt) and [`ValuesPlugin.kt`](src/main/kotlin/com/github/marcoral/versatia/example/values/ValuesPlugin.kt); the files are under `src/main/resources/resources/`.
+**Start with** [`Shop.kt`](src/main/kotlin/dev/versatia/example/values/Shop.kt) and the mappers in [`Mappers.kt`](src/main/kotlin/dev/versatia/example/values/Mappers.kt), then [`Limits.kt`](src/main/kotlin/dev/versatia/example/values/Limits.kt) and [`ValuesPlugin.kt`](src/main/kotlin/dev/versatia/example/values/ValuesPlugin.kt); the files are under `src/main/resources/resources/`.
 
 ## What the log shows
 
@@ -45,7 +45,7 @@ Part of the [Versatia examples](https://github.com/VersatiaFramework/VersatiaExa
 
 Requires JDK 21 and VersatiaAPI in your
 local Maven repository (`./gradlew publishToMavenLocal` in each checkout; see
-[Building the framework](https://versatiaframework.github.io/VersatiaDocs/docs/contributing/building));
+[Building the framework](https://versatia.dev/docs/contributing/building));
 running it requires a Paper 1.21.4 server with VersatiaCore installed, and the
 [CommandAPI](https://commandapi.jorel.dev) 12.x plugin for `/versatia reload` (without it, a
 plugin can still reload itself with `versatiaReload()`).

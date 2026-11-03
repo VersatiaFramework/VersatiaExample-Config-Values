@@ -1,7 +1,7 @@
-package com.github.marcoral.versatia.example.values
+package dev.versatia.example.values
 
-import com.github.marcoral.versatia.config.PreviousValueTracking
-import com.github.marcoral.versatia.config.Value
+import dev.versatia.config.PreviousValueTracking
+import dev.versatia.config.Value
 import org.bukkit.Material
 
 /** Values of an object need no bean; these come from a second file of the data folder. */
